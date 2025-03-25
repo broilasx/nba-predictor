@@ -1,7 +1,7 @@
 from nba_api.stats.endpoints import LeagueGameLog
 from time import sleep
 import pandas as pd
-from ..config import SEASONS
+from config import SEASONS
 
 def fetch_game_data():
     """Fetch NBA game data for specified seasons"""

@@ -1,11 +1,17 @@
+import os
+
+# Create models directory if it doesn't exist
+os.makedirs('models', exist_ok=True)
+os.makedirs('data', exist_ok=True)
+
 # Configuration constants
 SEASONS = [str(year) for year in range(2017, 2024)]
 RANDOM_STATE = 42
 TEST_SIZE = 0.2
-MODEL_PATH = 'models/nba_game_predictor.joblib'
-DATA_PATH = 'data/nba_game_data.csv'
-TEAM_ENCODER_PATH = 'models/team_encoder.joblib'
-MATCHUP_ENCODER_PATH = 'models/matchup_encoder.joblib'
+MODEL_PATH = os.path.join('models', 'nba_game_predictor.joblib')
+DATA_PATH = os.path.join('data', 'nba_game_data.csv')
+TEAM_ENCODER_PATH = os.path.join('models', 'team_encoder.joblib')
+MATCHUP_ENCODER_PATH = os.path.join('models', 'matchup_encoder.joblib')
 
 # Model parameters
 PARAM_GRID = {
